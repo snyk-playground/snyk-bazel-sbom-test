@@ -1,0 +1,16 @@
+boolean.py==5.0
+click==8.1.8
+cyclonedx-python-lib==10.0.0
+defusedxml==0.7.1
+license-expression==30.4.1
+markdown-it-py==3.0.0
+mdurl==0.1.2
+packageurl-python==0.16.0
+py-serializable==2.0.0
+Pygments==2.19.1
+pytz==2025.2
+rich==14.0.0
+shellingham==1.5.4
+sortedcontainers==2.4.0
+typer==0.15.3
+typing_extensions==4.13.2

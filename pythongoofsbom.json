@@ -1,0 +1,1410 @@
+{
+    "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.6",
+    "serialNumber": "urn:uuid:faa48adb-6723-4dc6-b521-b1103e7fe89c",
+    "version": 1,
+    "metadata": {
+        "timestamp": "2025-04-30T15:38:24Z",
+        "tools": {
+            "services": [
+                {
+                    "provider": {
+                        "name": "Snyk"
+                    },
+                    "name": "SBOM Export API",
+                    "version": "v1.110.1"
+                }
+            ]
+        },
+        "component": {
+            "bom-ref": "1-project@0.0.0",
+            "type": "application",
+            "name": "project",
+            "version": "0.0.0",
+            "purl": "pkg:pypi/project@0.0.0"
+        },
+        "properties": [
+            {
+                "name": "snyk:org_id",
+                "value": "fdf3b63a-9a4e-43d8-bae3-85212f002bea"
+            },
+            {
+                "name": "snyk:project_id",
+                "value": "9a895c96-b31e-4e67-ad1f-836d0e2bfa10"
+            }
+        ]
+    },
+    "components": [
+        {
+            "bom-ref": "2-six@1.11.0",
+            "type": "library",
+            "name": "six",
+            "version": "1.11.0",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/six@1.11.0"
+        },
+        {
+            "bom-ref": "3-webencodings@0.5.1",
+            "type": "library",
+            "name": "webencodings",
+            "version": "0.5.1",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/webencodings@0.5.1"
+        },
+        {
+            "bom-ref": "4-html5lib@1.0.1",
+            "type": "library",
+            "name": "html5lib",
+            "version": "1.0.1",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/html5lib@1.0.1"
+        },
+        {
+            "bom-ref": "5-bleach@2.1.4",
+            "type": "library",
+            "name": "bleach",
+            "version": "2.1.4",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/bleach@2.1.4"
+        },
+        {
+            "bom-ref": "6-certifi@2018.8.24",
+            "type": "library",
+            "name": "certifi",
+            "version": "2018.8.24",
+            "licenses": [
+                {
+                    "expression": "MPL-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/certifi@2018.8.24"
+        },
+        {
+            "bom-ref": "7-chardet@3.0.4",
+            "type": "library",
+            "name": "chardet",
+            "version": "3.0.4",
+            "licenses": [
+                {
+                    "expression": "LGPL-2.1"
+                }
+            ],
+            "purl": "pkg:pypi/chardet@3.0.4"
+        },
+        {
+            "bom-ref": "8-click@7.0",
+            "type": "library",
+            "name": "click",
+            "version": "7.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/click@7.0"
+        },
+        {
+            "bom-ref": "9-cycler@0.10.0",
+            "type": "library",
+            "name": "cycler",
+            "version": "0.10.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/cycler@0.10.0"
+        },
+        {
+            "bom-ref": "10-decorator@4.3.0",
+            "type": "library",
+            "name": "decorator",
+            "version": "4.3.0",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/decorator@4.3.0"
+        },
+        {
+            "bom-ref": "11-defusedxml@0.5.0",
+            "type": "library",
+            "name": "defusedxml",
+            "version": "0.5.0",
+            "licenses": [
+                {
+                    "expression": "Python-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/defusedxml@0.5.0"
+        },
+        {
+            "bom-ref": "12-entrypoints@0.2.3",
+            "type": "library",
+            "name": "entrypoints",
+            "version": "0.2.3",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/entrypoints@0.2.3"
+        },
+        {
+            "bom-ref": "13-itsdangerous@1.1.0",
+            "type": "library",
+            "name": "itsdangerous",
+            "version": "1.1.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/itsdangerous@1.1.0"
+        },
+        {
+            "bom-ref": "14-markupsafe@?",
+            "type": "library",
+            "name": "markupsafe",
+            "version": "?",
+            "purl": "pkg:pypi/markupsafe@%3F"
+        },
+        {
+            "bom-ref": "15-jinja2@2.10",
+            "type": "library",
+            "name": "jinja2",
+            "version": "2.10",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/jinja2@2.10"
+        },
+        {
+            "bom-ref": "16-werkzeug@0.14.1",
+            "type": "library",
+            "name": "werkzeug",
+            "version": "0.14.1",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/werkzeug@0.14.1"
+        },
+        {
+            "bom-ref": "17-flask@1.0.2",
+            "type": "library",
+            "name": "flask",
+            "version": "1.0.2",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/flask@1.0.2"
+        },
+        {
+            "bom-ref": "18-soupsieve@2.4.1",
+            "type": "library",
+            "name": "soupsieve",
+            "version": "2.4.1",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/soupsieve@2.4.1"
+        },
+        {
+            "bom-ref": "19-typing-extensions@4.7.1",
+            "type": "library",
+            "name": "typing-extensions",
+            "version": "4.7.1",
+            "licenses": [
+                {
+                    "expression": "Python-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/typing-extensions@4.7.1"
+        },
+        {
+            "bom-ref": "20-beautifulsoup4@4.13.4",
+            "type": "library",
+            "name": "beautifulsoup4",
+            "version": "4.13.4",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/beautifulsoup4@4.13.4"
+        },
+        {
+            "bom-ref": "21-google@2.0.1",
+            "type": "library",
+            "name": "google",
+            "version": "2.0.1",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/google@2.0.1"
+        },
+        {
+            "bom-ref": "22-google-cloud@0.34.0",
+            "type": "library",
+            "name": "google-cloud",
+            "version": "0.34.0",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/google-cloud@0.34.0"
+        },
+        {
+            "bom-ref": "23-setuptools@40.5.0",
+            "type": "library",
+            "name": "setuptools",
+            "version": "40.5.0",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/setuptools@40.5.0"
+        },
+        {
+            "bom-ref": "24-protobuf@3.6.1",
+            "type": "library",
+            "name": "protobuf",
+            "version": "3.6.1",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/protobuf@3.6.1"
+        },
+        {
+            "bom-ref": "25-gtfs-realtime-bindings@0.0.5",
+            "type": "library",
+            "name": "gtfs-realtime-bindings",
+            "version": "0.0.5",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/gtfs-realtime-bindings@0.0.5"
+        },
+        {
+            "bom-ref": "26-idna@2.7",
+            "type": "library",
+            "name": "idna",
+            "version": "2.7",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/idna@2.7"
+        },
+        {
+            "bom-ref": "27-backcall@0.2.0",
+            "type": "library",
+            "name": "backcall",
+            "version": "0.2.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/backcall@0.2.0"
+        },
+        {
+            "bom-ref": "28-parso@0.3.1",
+            "type": "library",
+            "name": "parso",
+            "version": "0.3.1",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/parso@0.3.1"
+        },
+        {
+            "bom-ref": "29-jedi@0.12.1",
+            "type": "library",
+            "name": "jedi",
+            "version": "0.12.1",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/jedi@0.12.1"
+        },
+        {
+            "bom-ref": "30-ptyprocess@0.6.0",
+            "type": "library",
+            "name": "ptyprocess",
+            "version": "0.6.0",
+            "licenses": [
+                {
+                    "expression": "ISC"
+                }
+            ],
+            "purl": "pkg:pypi/ptyprocess@0.6.0"
+        },
+        {
+            "bom-ref": "31-pexpect@4.6.0",
+            "type": "library",
+            "name": "pexpect",
+            "version": "4.6.0",
+            "licenses": [
+                {
+                    "expression": "ISC"
+                }
+            ],
+            "purl": "pkg:pypi/pexpect@4.6.0"
+        },
+        {
+            "bom-ref": "32-pickleshare@0.7.5",
+            "type": "library",
+            "name": "pickleshare",
+            "version": "0.7.5",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/pickleshare@0.7.5"
+        },
+        {
+            "bom-ref": "33-wcwidth@0.1.7",
+            "type": "library",
+            "name": "wcwidth",
+            "version": "0.1.7",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/wcwidth@0.1.7"
+        },
+        {
+            "bom-ref": "34-prompt-toolkit@2.0.7",
+            "type": "library",
+            "name": "prompt-toolkit",
+            "version": "2.0.7",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/prompt-toolkit@2.0.7"
+        },
+        {
+            "bom-ref": "35-pygments@2.2.0",
+            "type": "library",
+            "name": "pygments",
+            "version": "2.2.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/pygments@2.2.0"
+        },
+        {
+            "bom-ref": "36-ipython-genutils@0.2.0",
+            "type": "library",
+            "name": "ipython-genutils",
+            "version": "0.2.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/ipython-genutils@0.2.0"
+        },
+        {
+            "bom-ref": "37-traitlets@4.3.2",
+            "type": "library",
+            "name": "traitlets",
+            "version": "4.3.2",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/traitlets@4.3.2"
+        },
+        {
+            "bom-ref": "38-ipython@7.1.1",
+            "type": "library",
+            "name": "ipython",
+            "version": "7.1.1",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/ipython@7.1.1"
+        },
+        {
+            "bom-ref": "39-jupyter-core@4.4.0",
+            "type": "library",
+            "name": "jupyter-core",
+            "version": "4.4.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/jupyter-core@4.4.0"
+        },
+        {
+            "bom-ref": "40-python-dateutil@2.7.3",
+            "type": "library",
+            "name": "python-dateutil",
+            "version": "2.7.3",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause OR Apache-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/python-dateutil@2.7.3"
+        },
+        {
+            "bom-ref": "41-pyzmq@17.1.2",
+            "type": "library",
+            "name": "pyzmq",
+            "version": "17.1.2",
+            "licenses": [
+                {
+                    "expression": "(BSD-2-Clause OR LGPL-3.0)"
+                }
+            ],
+            "purl": "pkg:pypi/pyzmq@17.1.2"
+        },
+        {
+            "bom-ref": "42-tornado@5.1.1",
+            "type": "library",
+            "name": "tornado",
+            "version": "5.1.1",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/tornado@5.1.1"
+        },
+        {
+            "bom-ref": "43-jupyter-client@5.2.3",
+            "type": "library",
+            "name": "jupyter-client",
+            "version": "5.2.3",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/jupyter-client@5.2.3"
+        },
+        {
+            "bom-ref": "44-ipykernel@5.0.0",
+            "type": "library",
+            "name": "ipykernel",
+            "version": "5.0.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/ipykernel@5.0.0"
+        },
+        {
+            "bom-ref": "45-jsonschema@2.6.0",
+            "type": "library",
+            "name": "jsonschema",
+            "version": "2.6.0",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/jsonschema@2.6.0"
+        },
+        {
+            "bom-ref": "46-nbformat@4.4.0",
+            "type": "library",
+            "name": "nbformat",
+            "version": "4.4.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/nbformat@4.4.0"
+        },
+        {
+            "bom-ref": "47-mistune@0.8.3",
+            "type": "library",
+            "name": "mistune",
+            "version": "0.8.3",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/mistune@0.8.3"
+        },
+        {
+            "bom-ref": "48-pandocfilters@1.4.2",
+            "type": "library",
+            "name": "pandocfilters",
+            "version": "1.4.2",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/pandocfilters@1.4.2"
+        },
+        {
+            "bom-ref": "49-testpath@0.4.1",
+            "type": "library",
+            "name": "testpath",
+            "version": "0.4.1",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/testpath@0.4.1"
+        },
+        {
+            "bom-ref": "50-nbconvert@5.4.0",
+            "type": "library",
+            "name": "nbconvert",
+            "version": "5.4.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/nbconvert@5.4.0"
+        },
+        {
+            "bom-ref": "51-prometheus-client@0.3.1",
+            "type": "library",
+            "name": "prometheus-client",
+            "version": "0.3.1",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/prometheus-client@0.3.1"
+        },
+        {
+            "bom-ref": "52-send2trash@1.5.0",
+            "type": "library",
+            "name": "send2trash",
+            "version": "1.5.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/send2trash@1.5.0"
+        },
+        {
+            "bom-ref": "53-terminado@0.8.1",
+            "type": "library",
+            "name": "terminado",
+            "version": "0.8.1",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/terminado@0.8.1"
+        },
+        {
+            "bom-ref": "54-notebook@5.7.0",
+            "type": "library",
+            "name": "notebook",
+            "version": "5.7.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/notebook@5.7.0"
+        },
+        {
+            "bom-ref": "55-widgetsnbextension@3.4.2",
+            "type": "library",
+            "name": "widgetsnbextension",
+            "version": "3.4.2",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/widgetsnbextension@3.4.2"
+        },
+        {
+            "bom-ref": "56-ipywidgets@7.4.2",
+            "type": "library",
+            "name": "ipywidgets",
+            "version": "7.4.2",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/ipywidgets@7.4.2"
+        },
+        {
+            "bom-ref": "57-jupyter-console@5.2.0",
+            "type": "library",
+            "name": "jupyter-console",
+            "version": "5.2.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/jupyter-console@5.2.0"
+        },
+        {
+            "bom-ref": "58-qtconsole@4.4.1",
+            "type": "library",
+            "name": "qtconsole",
+            "version": "4.4.1",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/qtconsole@4.4.1"
+        },
+        {
+            "bom-ref": "59-jupyter@1.0.0",
+            "type": "library",
+            "name": "jupyter",
+            "version": "1.0.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/jupyter@1.0.0"
+        },
+        {
+            "bom-ref": "60-kiwisolver@1.0.1",
+            "type": "library",
+            "name": "kiwisolver",
+            "version": "1.0.1",
+            "licenses": [
+                {
+                    "expression": "BSD-3-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/kiwisolver@1.0.1"
+        },
+        {
+            "bom-ref": "61-numpy@1.15.3",
+            "type": "library",
+            "name": "numpy",
+            "version": "1.15.3",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/numpy@1.15.3"
+        },
+        {
+            "bom-ref": "62-pyparsing@2.2.0",
+            "type": "library",
+            "name": "pyparsing",
+            "version": "2.2.0",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/pyparsing@2.2.0"
+        },
+        {
+            "bom-ref": "63-pytz@2018.5",
+            "type": "library",
+            "name": "pytz",
+            "version": "2018.5",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/pytz@2018.5"
+        },
+        {
+            "bom-ref": "64-matplotlib@2.2.2",
+            "type": "library",
+            "name": "matplotlib",
+            "version": "2.2.2",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/matplotlib@2.2.2"
+        },
+        {
+            "bom-ref": "65-nltk@3.3",
+            "type": "library",
+            "name": "nltk",
+            "version": "3.3",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/nltk@3.3"
+        },
+        {
+            "bom-ref": "66-oauthlib@2.1.0",
+            "type": "library",
+            "name": "oauthlib",
+            "version": "2.1.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/oauthlib@2.1.0"
+        },
+        {
+            "bom-ref": "67-pandas@0.23.3",
+            "type": "library",
+            "name": "pandas",
+            "version": "0.23.3",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/pandas@0.23.3"
+        },
+        {
+            "bom-ref": "68-protobuf-to-dict@0.1.0",
+            "type": "library",
+            "name": "protobuf-to-dict",
+            "version": "0.1.0",
+            "licenses": [
+                {
+                    "expression": "Public-Domain"
+                }
+            ],
+            "purl": "pkg:pypi/protobuf-to-dict@0.1.0"
+        },
+        {
+            "bom-ref": "69-pysocks@1.6.8",
+            "type": "library",
+            "name": "pysocks",
+            "version": "1.6.8",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/pysocks@1.6.8"
+        },
+        {
+            "bom-ref": "70-urllib3@1.23",
+            "type": "library",
+            "name": "urllib3",
+            "version": "1.23",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/urllib3@1.23"
+        },
+        {
+            "bom-ref": "71-requests@2.19.1",
+            "type": "library",
+            "name": "requests",
+            "version": "2.19.1",
+            "licenses": [
+                {
+                    "expression": "Apache-2.0"
+                }
+            ],
+            "purl": "pkg:pypi/requests@2.19.1"
+        },
+        {
+            "bom-ref": "72-requests-oauthlib@1.0.0",
+            "type": "library",
+            "name": "requests-oauthlib",
+            "version": "1.0.0",
+            "licenses": [
+                {
+                    "expression": "ISC"
+                }
+            ],
+            "purl": "pkg:pypi/requests-oauthlib@1.0.0"
+        },
+        {
+            "bom-ref": "73-simplegeneric@0.8.1",
+            "type": "library",
+            "name": "simplegeneric",
+            "version": "0.8.1",
+            "licenses": [
+                {
+                    "expression": "ZPL-2.1"
+                }
+            ],
+            "purl": "pkg:pypi/simplegeneric@0.8.1"
+        },
+        {
+            "bom-ref": "74-tweepy@3.6.0",
+            "type": "library",
+            "name": "tweepy",
+            "version": "3.6.0",
+            "licenses": [
+                {
+                    "expression": "MIT"
+                }
+            ],
+            "purl": "pkg:pypi/tweepy@3.6.0"
+        },
+        {
+            "bom-ref": "75-xlrd@1.1.0",
+            "type": "library",
+            "name": "xlrd",
+            "version": "1.1.0",
+            "licenses": [
+                {
+                    "expression": "BSD-2-Clause"
+                }
+            ],
+            "purl": "pkg:pypi/xlrd@1.1.0"
+        }
+    ],
+    "dependencies": [
+        {
+            "ref": "1-project@0.0.0",
+            "dependsOn": [
+                "5-bleach@2.1.4",
+                "6-certifi@2018.8.24",
+                "7-chardet@3.0.4",
+                "8-click@7.0",
+                "9-cycler@0.10.0",
+                "10-decorator@4.3.0",
+                "11-defusedxml@0.5.0",
+                "12-entrypoints@0.2.3",
+                "17-flask@1.0.2",
+                "21-google@2.0.1",
+                "22-google-cloud@0.34.0",
+                "25-gtfs-realtime-bindings@0.0.5",
+                "4-html5lib@1.0.1",
+                "26-idna@2.7",
+                "44-ipykernel@5.0.0",
+                "38-ipython@7.1.1",
+                "36-ipython-genutils@0.2.0",
+                "56-ipywidgets@7.4.2",
+                "13-itsdangerous@1.1.0",
+                "29-jedi@0.12.1",
+                "15-jinja2@2.10",
+                "45-jsonschema@2.6.0",
+                "59-jupyter@1.0.0",
+                "43-jupyter-client@5.2.3",
+                "57-jupyter-console@5.2.0",
+                "39-jupyter-core@4.4.0",
+                "60-kiwisolver@1.0.1",
+                "64-matplotlib@2.2.2",
+                "47-mistune@0.8.3",
+                "50-nbconvert@5.4.0",
+                "46-nbformat@4.4.0",
+                "65-nltk@3.3",
+                "54-notebook@5.7.0",
+                "61-numpy@1.15.3",
+                "66-oauthlib@2.1.0",
+                "67-pandas@0.23.3",
+                "48-pandocfilters@1.4.2",
+                "28-parso@0.3.1",
+                "31-pexpect@4.6.0",
+                "32-pickleshare@0.7.5",
+                "51-prometheus-client@0.3.1",
+                "34-prompt-toolkit@2.0.7",
+                "24-protobuf@3.6.1",
+                "68-protobuf-to-dict@0.1.0",
+                "30-ptyprocess@0.6.0",
+                "35-pygments@2.2.0",
+                "62-pyparsing@2.2.0",
+                "69-pysocks@1.6.8",
+                "40-python-dateutil@2.7.3",
+                "63-pytz@2018.5",
+                "41-pyzmq@17.1.2",
+                "58-qtconsole@4.4.1",
+                "71-requests@2.19.1",
+                "72-requests-oauthlib@1.0.0",
+                "52-send2trash@1.5.0",
+                "73-simplegeneric@0.8.1",
+                "2-six@1.11.0",
+                "53-terminado@0.8.1",
+                "49-testpath@0.4.1",
+                "42-tornado@5.1.1",
+                "37-traitlets@4.3.2",
+                "74-tweepy@3.6.0",
+                "70-urllib3@1.23",
+                "33-wcwidth@0.1.7",
+                "3-webencodings@0.5.1",
+                "16-werkzeug@0.14.1",
+                "55-widgetsnbextension@3.4.2",
+                "75-xlrd@1.1.0"
+            ]
+        },
+        {
+            "ref": "2-six@1.11.0"
+        },
+        {
+            "ref": "3-webencodings@0.5.1"
+        },
+        {
+            "ref": "4-html5lib@1.0.1",
+            "dependsOn": [
+                "2-six@1.11.0",
+                "3-webencodings@0.5.1"
+            ]
+        },
+        {
+            "ref": "5-bleach@2.1.4",
+            "dependsOn": [
+                "4-html5lib@1.0.1",
+                "2-six@1.11.0"
+            ]
+        },
+        {
+            "ref": "6-certifi@2018.8.24"
+        },
+        {
+            "ref": "7-chardet@3.0.4"
+        },
+        {
+            "ref": "8-click@7.0"
+        },
+        {
+            "ref": "9-cycler@0.10.0",
+            "dependsOn": [
+                "2-six@1.11.0"
+            ]
+        },
+        {
+            "ref": "10-decorator@4.3.0"
+        },
+        {
+            "ref": "11-defusedxml@0.5.0"
+        },
+        {
+            "ref": "12-entrypoints@0.2.3"
+        },
+        {
+            "ref": "13-itsdangerous@1.1.0"
+        },
+        {
+            "ref": "14-markupsafe@?"
+        },
+        {
+            "ref": "15-jinja2@2.10",
+            "dependsOn": [
+                "14-markupsafe@?"
+            ]
+        },
+        {
+            "ref": "16-werkzeug@0.14.1"
+        },
+        {
+            "ref": "17-flask@1.0.2",
+            "dependsOn": [
+                "8-click@7.0",
+                "13-itsdangerous@1.1.0",
+                "15-jinja2@2.10",
+                "16-werkzeug@0.14.1"
+            ]
+        },
+        {
+            "ref": "18-soupsieve@2.4.1"
+        },
+        {
+            "ref": "19-typing-extensions@4.7.1"
+        },
+        {
+            "ref": "20-beautifulsoup4@4.13.4",
+            "dependsOn": [
+                "18-soupsieve@2.4.1",
+                "19-typing-extensions@4.7.1"
+            ]
+        },
+        {
+            "ref": "21-google@2.0.1",
+            "dependsOn": [
+                "20-beautifulsoup4@4.13.4"
+            ]
+        },
+        {
+            "ref": "22-google-cloud@0.34.0"
+        },
+        {
+            "ref": "23-setuptools@40.5.0"
+        },
+        {
+            "ref": "24-protobuf@3.6.1",
+            "dependsOn": [
+                "23-setuptools@40.5.0",
+                "2-six@1.11.0"
+            ]
+        },
+        {
+            "ref": "25-gtfs-realtime-bindings@0.0.5",
+            "dependsOn": [
+                "24-protobuf@3.6.1",
+                "23-setuptools@40.5.0"
+            ]
+        },
+        {
+            "ref": "26-idna@2.7"
+        },
+        {
+            "ref": "27-backcall@0.2.0"
+        },
+        {
+            "ref": "28-parso@0.3.1"
+        },
+        {
+            "ref": "29-jedi@0.12.1",
+            "dependsOn": [
+                "28-parso@0.3.1"
+            ]
+        },
+        {
+            "ref": "30-ptyprocess@0.6.0"
+        },
+        {
+            "ref": "31-pexpect@4.6.0",
+            "dependsOn": [
+                "30-ptyprocess@0.6.0"
+            ]
+        },
+        {
+            "ref": "32-pickleshare@0.7.5"
+        },
+        {
+            "ref": "33-wcwidth@0.1.7"
+        },
+        {
+            "ref": "34-prompt-toolkit@2.0.7",
+            "dependsOn": [
+                "2-six@1.11.0",
+                "33-wcwidth@0.1.7"
+            ]
+        },
+        {
+            "ref": "35-pygments@2.2.0"
+        },
+        {
+            "ref": "36-ipython-genutils@0.2.0"
+        },
+        {
+            "ref": "37-traitlets@4.3.2",
+            "dependsOn": [
+                "10-decorator@4.3.0",
+                "36-ipython-genutils@0.2.0",
+                "2-six@1.11.0"
+            ]
+        },
+        {
+            "ref": "38-ipython@7.1.1",
+            "dependsOn": [
+                "27-backcall@0.2.0",
+                "10-decorator@4.3.0",
+                "29-jedi@0.12.1",
+                "31-pexpect@4.6.0",
+                "32-pickleshare@0.7.5",
+                "34-prompt-toolkit@2.0.7",
+                "35-pygments@2.2.0",
+                "23-setuptools@40.5.0",
+                "37-traitlets@4.3.2"
+            ]
+        },
+        {
+            "ref": "39-jupyter-core@4.4.0",
+            "dependsOn": [
+                "37-traitlets@4.3.2"
+            ]
+        },
+        {
+            "ref": "40-python-dateutil@2.7.3",
+            "dependsOn": [
+                "2-six@1.11.0"
+            ]
+        },
+        {
+            "ref": "41-pyzmq@17.1.2"
+        },
+        {
+            "ref": "42-tornado@5.1.1"
+        },
+        {
+            "ref": "43-jupyter-client@5.2.3",
+            "dependsOn": [
+                "39-jupyter-core@4.4.0",
+                "40-python-dateutil@2.7.3",
+                "41-pyzmq@17.1.2",
+                "42-tornado@5.1.1",
+                "37-traitlets@4.3.2"
+            ]
+        },
+        {
+            "ref": "44-ipykernel@5.0.0",
+            "dependsOn": [
+                "38-ipython@7.1.1",
+                "43-jupyter-client@5.2.3",
+                "42-tornado@5.1.1",
+                "37-traitlets@4.3.2"
+            ]
+        },
+        {
+            "ref": "45-jsonschema@2.6.0"
+        },
+        {
+            "ref": "46-nbformat@4.4.0",
+            "dependsOn": [
+                "36-ipython-genutils@0.2.0",
+                "45-jsonschema@2.6.0",
+                "39-jupyter-core@4.4.0",
+                "37-traitlets@4.3.2"
+            ]
+        },
+        {
+            "ref": "47-mistune@0.8.3"
+        },
+        {
+            "ref": "48-pandocfilters@1.4.2"
+        },
+        {
+            "ref": "49-testpath@0.4.1"
+        },
+        {
+            "ref": "50-nbconvert@5.4.0",
+            "dependsOn": [
+                "5-bleach@2.1.4",
+                "11-defusedxml@0.5.0",
+                "12-entrypoints@0.2.3",
+                "15-jinja2@2.10",
+                "39-jupyter-core@4.4.0",
+                "47-mistune@0.8.3",
+                "46-nbformat@4.4.0",
+                "48-pandocfilters@1.4.2",
+                "35-pygments@2.2.0",
+                "49-testpath@0.4.1",
+                "37-traitlets@4.3.2"
+            ]
+        },
+        {
+            "ref": "51-prometheus-client@0.3.1"
+        },
+        {
+            "ref": "52-send2trash@1.5.0"
+        },
+        {
+            "ref": "53-terminado@0.8.1",
+            "dependsOn": [
+                "30-ptyprocess@0.6.0",
+                "42-tornado@5.1.1"
+            ]
+        },
+        {
+            "ref": "54-notebook@5.7.0",
+            "dependsOn": [
+                "44-ipykernel@5.0.0",
+                "36-ipython-genutils@0.2.0",
+                "15-jinja2@2.10",
+                "43-jupyter-client@5.2.3",
+                "39-jupyter-core@4.4.0",
+                "50-nbconvert@5.4.0",
+                "46-nbformat@4.4.0",
+                "51-prometheus-client@0.3.1",
+                "41-pyzmq@17.1.2",
+                "52-send2trash@1.5.0",
+                "53-terminado@0.8.1",
+                "42-tornado@5.1.1",
+                "37-traitlets@4.3.2"
+            ]
+        },
+        {
+            "ref": "55-widgetsnbextension@3.4.2",
+            "dependsOn": [
+                "54-notebook@5.7.0"
+            ]
+        },
+        {
+            "ref": "56-ipywidgets@7.4.2",
+            "dependsOn": [
+                "44-ipykernel@5.0.0",
+                "38-ipython@7.1.1",
+                "46-nbformat@4.4.0",
+                "37-traitlets@4.3.2",
+                "55-widgetsnbextension@3.4.2"
+            ]
+        },
+        {
+            "ref": "57-jupyter-console@5.2.0",
+            "dependsOn": [
+                "44-ipykernel@5.0.0",
+                "38-ipython@7.1.1",
+                "43-jupyter-client@5.2.3",
+                "34-prompt-toolkit@2.0.7",
+                "35-pygments@2.2.0"
+            ]
+        },
+        {
+            "ref": "58-qtconsole@4.4.1",
+            "dependsOn": [
+                "44-ipykernel@5.0.0",
+                "36-ipython-genutils@0.2.0",
+                "43-jupyter-client@5.2.3",
+                "39-jupyter-core@4.4.0",
+                "35-pygments@2.2.0",
+                "37-traitlets@4.3.2"
+            ]
+        },
+        {
+            "ref": "59-jupyter@1.0.0",
+            "dependsOn": [
+                "44-ipykernel@5.0.0",
+                "56-ipywidgets@7.4.2",
+                "57-jupyter-console@5.2.0",
+                "50-nbconvert@5.4.0",
+                "54-notebook@5.7.0",
+                "58-qtconsole@4.4.1"
+            ]
+        },
+        {
+            "ref": "60-kiwisolver@1.0.1",
+            "dependsOn": [
+                "23-setuptools@40.5.0"
+            ]
+        },
+        {
+            "ref": "61-numpy@1.15.3"
+        },
+        {
+            "ref": "62-pyparsing@2.2.0"
+        },
+        {
+            "ref": "63-pytz@2018.5"
+        },
+        {
+            "ref": "64-matplotlib@2.2.2",
+            "dependsOn": [
+                "9-cycler@0.10.0",
+                "60-kiwisolver@1.0.1",
+                "61-numpy@1.15.3",
+                "62-pyparsing@2.2.0",
+                "40-python-dateutil@2.7.3",
+                "63-pytz@2018.5",
+                "2-six@1.11.0"
+            ]
+        },
+        {
+            "ref": "65-nltk@3.3",
+            "dependsOn": [
+                "2-six@1.11.0"
+            ]
+        },
+        {
+            "ref": "66-oauthlib@2.1.0"
+        },
+        {
+            "ref": "67-pandas@0.23.3",
+            "dependsOn": [
+                "61-numpy@1.15.3",
+                "40-python-dateutil@2.7.3",
+                "63-pytz@2018.5"
+            ]
+        },
+        {
+            "ref": "68-protobuf-to-dict@0.1.0",
+            "dependsOn": [
+                "24-protobuf@3.6.1"
+            ]
+        },
+        {
+            "ref": "69-pysocks@1.6.8"
+        },
+        {
+            "ref": "70-urllib3@1.23"
+        },
+        {
+            "ref": "71-requests@2.19.1",
+            "dependsOn": [
+                "6-certifi@2018.8.24",
+                "7-chardet@3.0.4",
+                "26-idna@2.7",
+                "70-urllib3@1.23"
+            ]
+        },
+        {
+            "ref": "72-requests-oauthlib@1.0.0",
+            "dependsOn": [
+                "66-oauthlib@2.1.0",
+                "71-requests@2.19.1"
+            ]
+        },
+        {
+            "ref": "73-simplegeneric@0.8.1"
+        },
+        {
+            "ref": "74-tweepy@3.6.0",
+            "dependsOn": [
+                "69-pysocks@1.6.8",
+                "71-requests@2.19.1",
+                "72-requests-oauthlib@1.0.0",
+                "2-six@1.11.0"
+            ]
+        },
+        {
+            "ref": "75-xlrd@1.1.0"
+        }
+    ]
+}
