@@ -49,15 +49,88 @@ def get_package_versions(package_name, visited=None):
     
     return transitive_dependencies  # Return the list of dependencies
 
-def extract_version(tags):
+def extract_package_info(tags):
     for tag in tags:
-        if 'pypi_version=' in tag:
-            return tag.split('=')[1]
-        elif 'maven_coordinates=' in tag:
-            return tag.split(':')[-1]
-    return "unknown"
+        if 'maven_coordinates=' in tag:
+            # Maven format: group:artifact:version
+            coords = tag.split('=')[1].split(':')
+            if len(coords) >= 3:
+                group_id, artifact_id, version = coords[0], coords[1], coords[2]
+                return f"{group_id}.{artifact_id}", version, "maven"
+        elif 'pypi_name=' in tag:
+            # PyPI format: separate name and version tags
+            name = tag.split('=')[1]
+            version = next((t.split('=')[1] for t in tags if 'pypi_version=' in t), "unknown")
+            return name, version, "pypi"
+    
+    # Default case if no matching tags found
+    return None, "unknown", None
+
+def create_package_url(package_name, version, purl_type):
+    """
+    Create a PackageURL object based on the package type.
+    
+    Args:
+        package_name (str): Name of the package
+        version (str): Version of the package
+        purl_type (str): Type of package (maven or pypi)
+        
+    Returns:
+        PackageURL: CycloneDX PackageURL object
+    """
+    if purl_type == "maven":
+        # Handle Maven package names which might contain dots
+        group_artifact = package_name.split('.')
+        if len(group_artifact) > 1:
+            group_id = '.'.join(group_artifact[:-1])
+            artifact_id = group_artifact[-1]
+            return PackageURL(type='maven', namespace=group_id, name=artifact_id, version=version)
+    
+    # PyPI packages
+    if purl_type == "pypi":
+        return PackageURL(type='pypi', name=package_name, version=version)
+    else:
+        return PackageURL(type='generic', name=package_name, version=version)
+
+def determine_component_type(bazel_deps):
+    """
+    Determine the main component type based on bazel_deps structure.
+    
+    Args:
+        bazel_deps (dict): The Bazel dependencies dictionary
+        
+    Returns:
+        str: 'maven', 'pypi', or 'generic'
+    """
+    # First check if it's a direct dependency structure
+    if any('maven_coordinates=' in str(tags) for _, details in bazel_deps.items() for tags in details.get('tags', [])):
+        return 'maven'
+    if any('pypi_name=' in str(tags) for _, details in bazel_deps.items() for tags in details.get('tags', [])):
+        return 'pypi'
+    
+    # Then check if it's a nested structure
+    if isinstance(bazel_deps, dict):
+        if 'maven' in bazel_deps:
+            return 'maven'
+        if 'pypi' in bazel_deps:
+            return 'pypi'
+    
+    return 'generic'
 
 def generate_cyclonedx_sbom(bazel_deps, main_component_name="project"):
+    """
+    Generate a CycloneDX SBOM from Bazel dependencies.
+
+    Args:
+        bazel_deps (dict): The Bazel dependencies.
+        main_component_name (str): Name of the main component.
+
+    Returns:
+        dict: A CycloneDX SBOM.
+    """
+    # Determine component type
+    component_type = determine_component_type(bazel_deps)
+    
     # Create a CycloneDX BOM object
     bom = Bom()
     
@@ -67,7 +140,7 @@ def generate_cyclonedx_sbom(bazel_deps, main_component_name="project"):
         version="0.0.0",
         type=ComponentType.APPLICATION,
         bom_ref=f"1-{main_component_name}@0.0.0",
-        purl=PackageURL(type='pypi', name=main_component_name, version='0.0.0')
+        purl=PackageURL(type=component_type, name=main_component_name, version='0.0.0')
     )
     
     # Set metadata for the BOM
@@ -76,68 +149,66 @@ def generate_cyclonedx_sbom(bazel_deps, main_component_name="project"):
     
     # This is the index holder to make sure each bom_ref is unique
     true_index = 2
-    for (package, details) in bazel_deps.items():
-        version = extract_version(details["tags"])
-        package_name = details["tags"][0].split('=')[1] if len(details["tags"]) > 0 else package
-        is_valid = False
-        if validate_package_name(package_name):
-            transitive_dependencies = get_package_versions(package_name)
-            print(f"Here are the transitive dependencies: {transitive_dependencies}")
-            if transitive_dependencies:
-                is_valid = True
-        else:
-            print(f"Invalid package name: {package_name}  Skipping transitive dependency generation")
+    for package, details in bazel_deps.items():
+        package_name, version, purl_type = extract_package_info(details["tags"])
         
-        # Construct a valid purl
-        package_name_clean = package_name.lstrip('@').replace('//', '/')
-        purl = None
+        if not package_name or not purl_type:
+            print(f"Skipping package with invalid tags: {details['tags']}")
+            continue
+            
         try:
-            purl = PackageURL(type='pypi', name=package_name_clean, version=version if version != "unknown" else None)
-        except ValueError as e:
-            print(f"Invalid PURL for package {package_name_clean}: {e}")
-        
-        bom_ref = f"{true_index}-{package_name_clean}@{version}"
-        component = Component(
-            name=package_name_clean,
-            version=version,
-            type=ComponentType.LIBRARY,
-            bom_ref=bom_ref,
-            purl=purl  # Use the constructed purl if valid
-        )
-        bom.components.add(component)
-        bom.register_dependency(main_component, [component])
-        true_index += 1
-        # Add dependencies to the CycloneDX BOM
-        if is_valid:
-            # Construct the dependsOn list as a string
-            # depends_on = [f"{true_index}-{dep_name}@{dep_version}" for dep_name, dep_version in transitive_dependencies]
-            for dep_name, dep_version in transitive_dependencies:
-                transitive_component = Component(
-                    name=dep_name,
-                    version=dep_version,
-                    type=ComponentType.LIBRARY,
-                    bom_ref=f"{true_index}-{dep_name}@{dep_version}",
-                    purl=PackageURL(type='pypi', name=dep_name, version=dep_version)
-                )
-                true_index += 1
-                bom.components.add(transitive_component)
-                bom.register_dependency(main_component, [transitive_component])
-                bom.register_dependency(component, [transitive_component])
-            # dependency = Dependency(ref=component.bom_ref, dependencies=depends_on_str)
-            # bom.dependencies.add(dependency)
-        else:
-            dependency = Dependency(ref=component.bom_ref)
-            bom.dependencies.add(dependency)
-    
-    # Use CycloneDX library to find transitive dependencies
-    # This is a placeholder for actual transitive dependency resolution logic
-    # You would need to implement this based on your specific requirements
+            purl = create_package_url(package_name, version, purl_type)
+            bom_ref = f"{true_index}-{package_name}@{version}"
+            
+            component = Component(
+                name=package_name,
+                version=version,
+                type=ComponentType.LIBRARY,
+                bom_ref=bom_ref,
+                purl=purl
+            )
+            
+            bom.components.add(component)
+            bom.register_dependency(main_component, [component])
+            # Handle dependencies based on package type
+            if purl_type == "pypi":
+                is_valid = validate_package_name(package_name)
+                if is_valid:
+                    transitive_dependencies = get_package_versions(package_name)
+                    if transitive_dependencies:
+                        for dep_name, dep_version in transitive_dependencies:
+                            dep_bom_ref = f"{true_index}-{dep_name}@{dep_version}"
+                            dep_purl = create_package_url(dep_name, dep_version, "pypi")
+                            
+                            dep_component = Component(
+                                name=dep_name,
+                                version=dep_version,
+                                type=ComponentType.LIBRARY,
+                                bom_ref=dep_bom_ref,
+                                purl=dep_purl
+                            )
+                            
+                            bom.components.add(dep_component)
+                            bom.register_dependency(main_component, [dep_component])
+                            bom.register_dependency(component, [dep_component])
+                            true_index += 1
+            # if purl_type == "maven":
+                
+            
+            # Register the component's dependencies
+            bom.register_dependency(main_component, [component])
+            true_index += 1
+            
+        except Exception as e:
+            print(f"Error processing package {package_name}: {str(e)}")
+            continue
 
-    # Convert the CycloneDX BOM to JSON
-    json_outputter: JsonV1Dot6 = JsonV1Dot6(bom)
+    # Convert to JSON and validate
+    json_outputter = JsonV1Dot6(bom)
     serialized_bom = json_outputter.output_as_string(indent=2)
-    json_validator = JsonStrictValidator(SchemaVersion.V1_6)
+    
     try:
+        json_validator = JsonStrictValidator(SchemaVersion.V1_6)
         validation_errors = json_validator.validate_str(serialized_bom)
         if validation_errors:
             print('JSON invalid', 'ValidationError:', repr(validation_errors), sep='\n', file=sys.stderr)
@@ -145,12 +216,9 @@ def generate_cyclonedx_sbom(bazel_deps, main_component_name="project"):
         print('JSON valid')
     except MissingOptionalDependencyException as error:
         print('JSON-validation was skipped due to', error)
-    # sbom_json = serialized_bom
     
     # Reorder the JSON to have metadata at the top
     sbom_dict = json.loads(serialized_bom)
-
-    # Reorder the dependencies to have 'ref' before 'dependsOn'
     ordered_dependencies = []
     for dep in sbom_dict.get("dependencies", []):
         ordered_dep = OrderedDict()
@@ -159,7 +227,6 @@ def generate_cyclonedx_sbom(bazel_deps, main_component_name="project"):
             ordered_dep["dependsOn"] = dep["dependsOn"]
         ordered_dependencies.append(ordered_dep)
 
-    # Reconstruct the SBOM with ordered dependencies
     ordered_sbom = OrderedDict([
         ("$schema", sbom_dict.get("$schema")),
         ("bomFormat", sbom_dict.get("bomFormat")),

@@ -1,5 +1,4 @@
 bazel-python
 __pycache__
 utils/__pycache__
-bom.json
-bomold.json
+bom*.json

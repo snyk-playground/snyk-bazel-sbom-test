@@ -14,7 +14,6 @@ def read_bazel_deps(file_path: str):
                 name_element = rule.find('string[@name="name"]')
                 if name_element is not None:
                     main_component_name = name_element.get('value')
-                    print(f"Main component name: {main_component_name}")
                     
             # Collect Maven dependencies
             if rule_class == "jvm_import":

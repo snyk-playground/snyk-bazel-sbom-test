@@ -14,13 +14,13 @@ def convert_bazel_depgraph_to_sbom(input_file: str, output_file: str):
         input_file (str): Path to the Bazel dependency graph file.
         output_file (str): Path where the SBOM will be saved.
     """
-    print(f"Converting {input_file} to SBOM and saving to {output_file}")
+    print(f"Reading {input_file} to generate CycloneDX SBOM")
     bazel_deps, main_component_name = read_bazel_deps(input_file)
-    print(json.dumps(bazel_deps, indent=4))
-    print(f"Main component name: {main_component_name}")
+    print(f"Generating CycloneDX SBOM for {main_component_name}")
     sbom = generate_cyclonedx_sbom(bazel_deps, main_component_name)
+    print(f"CycloneDX SBOM generated successfully.  Saving to {output_file}...")
     write_json_file(output_file, sbom)
-    print(f"SBOM saved to {output_file}")
+    print(f"CycloneDX SBOM saved to {output_file}")
     
 
 @app.command()
