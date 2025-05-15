@@ -49,36 +49,35 @@ def get_package_versions(package_name, visited=None):
     
     return transitive_dependencies  # Return the list of dependencies
 
-def generate_cyclonedx_sbom(bazel_deps):
-    """
-    Generate a CycloneDX SBOM from Bazel dependencies.
+def extract_version(tags):
+    for tag in tags:
+        if 'pypi_version=' in tag:
+            return tag.split('=')[1]
+        elif 'maven_coordinates=' in tag:
+            return tag.split(':')[-1]
+    return "unknown"
 
-    Args:
-        bazel_deps (dict): The Bazel dependencies.
-
-    Returns:
-        dict: A CycloneDX SBOM.
-    """
+def generate_cyclonedx_sbom(bazel_deps, main_component_name="project"):
     # Create a CycloneDX BOM object
     bom = Bom()
     
     # Define the main component of the project
     main_component = Component(
-        name="project",
+        name=main_component_name,
         version="0.0.0",
         type=ComponentType.APPLICATION,
-        bom_ref="1-project@0.0.0",
-        purl=PackageURL(type='pypi', name='project', version='0.0.0')
+        bom_ref=f"1-{main_component_name}@0.0.0",
+        purl=PackageURL(type='pypi', name=main_component_name, version='0.0.0')
     )
     
     # Set metadata for the BOM
-    bom.metadata.tools.tools.add(Tool(name="bazel-python-dependency-sbom-generator", version="1.0.0"))
+    bom.metadata.tools.tools.add(Tool(name="bazel-dependency-sbom-generator", version="1.1.0"))
     bom.metadata.component = main_component
     
     # This is the index holder to make sure each bom_ref is unique
     true_index = 2
-    for index, (package, details) in enumerate(bazel_deps.items()):
-        version = details["tags"][1].split('=')[1] if len(details["tags"]) > 1 else "unknown"
+    for (package, details) in bazel_deps.items():
+        version = extract_version(details["tags"])
         package_name = details["tags"][0].split('=')[1] if len(details["tags"]) > 0 else package
         is_valid = False
         if validate_package_name(package_name):

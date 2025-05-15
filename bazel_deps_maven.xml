@@ -1,0 +1,1297 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<query version="2">
+    <rule class="java_binary" location="/Users/roberthicks/Desktop/vscodeprojects/snyk-java-bazel-sbom-example/BUILD:26:12" name="//:java-maven">
+        <string name="name" value="java-maven"/>
+        <string name="generator_name" value="java-maven"/>
+        <string name="generator_function" value="java_binary"/>
+        <string name="generator_location" value="/Users/roberthicks/Desktop/vscodeprojects/snyk-java-bazel-sbom-example/BUILD:26:12"/>
+        <list name="runtime_deps">
+            <label value="//:java-maven-lib"/>
+        </list>
+        <label name="launcher" value="@bazel_tools//tools/jdk:launcher_flag_alias"/>
+        <string name="main_class" value="com.example.myproject.App"/>
+        <rule-input name="//:java-maven-lib"/>
+        <rule-input name="@bazel_tools//tools/jdk:launcher_flag_alias"/>
+        <rule-output name="//:java-maven.jar"/>
+        <rule-output name="//:java-maven-src.jar"/>
+        <rule-output name="//:java-maven_deploy-src.jar"/>
+    </rule>
+    <rule class="java_library" location="/Users/roberthicks/Desktop/vscodeprojects/snyk-java-bazel-sbom-example/BUILD:8:13" name="//:java-maven-lib">
+        <string name="name" value="java-maven-lib"/>
+        <string name="generator_name" value="java-maven-lib"/>
+        <string name="generator_function" value="java_library"/>
+        <string name="generator_location" value="/Users/roberthicks/Desktop/vscodeprojects/snyk-java-bazel-sbom-example/BUILD:8:13"/>
+        <list name="srcs">
+            <label value="//:src/main/java/com/example/myproject/App.java"/>
+        </list>
+        <list name="deps">
+            <label value="@maven//:com_google_guava_guava"/>
+            <label value="@maven//:org_springframework_boot_spring_boot"/>
+            <label value="@maven//:org_springframework_boot_spring_boot_autoconfigure"/>
+            <label value="@maven//:org_springframework_boot_spring_boot_starter_web"/>
+            <label value="@maven//:org_springframework_spring_context"/>
+            <label value="@maven//:org_springframework_spring_web"/>
+            <label value="@maven//:org_springframework_spring_aop"/>
+            <label value="@maven//:org_springframework_spring_aspects"/>
+            <label value="@maven//:org_springframework_spring_beans"/>
+            <label value="@maven//:org_springframework_spring_jdbc"/>
+            <label value="@maven//:org_springframework_spring_test"/>
+            <label value="@maven//:org_springframework_spring_tx"/>
+        </list>
+        <rule-input name="//:src/main/java/com/example/myproject/App.java"/>
+        <rule-input name="@maven//:com_google_guava_guava"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot_autoconfigure"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot_starter_web"/>
+        <rule-input name="@maven//:org_springframework_spring_aop"/>
+        <rule-input name="@maven//:org_springframework_spring_aspects"/>
+        <rule-input name="@maven//:org_springframework_spring_beans"/>
+        <rule-input name="@maven//:org_springframework_spring_context"/>
+        <rule-input name="@maven//:org_springframework_spring_jdbc"/>
+        <rule-input name="@maven//:org_springframework_spring_test"/>
+        <rule-input name="@maven//:org_springframework_spring_tx"/>
+        <rule-input name="@maven//:org_springframework_spring_web"/>
+        <rule-output name="//:libjava-maven-lib.jar"/>
+        <rule-output name="//:libjava-maven-lib-src.jar"/>
+    </rule>
+    <source-file location="/Users/roberthicks/Desktop/vscodeprojects/snyk-java-bazel-sbom-example/src/main/java/com/example/myproject/App.java:1:1" name="//:src/main/java/com/example/myproject/App.java">
+        <visibility-label name="//visibility:public"/>
+    </source-file>
+    <rule class="launcher_flag_alias" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/bazel_tools/tools/jdk/BUILD:195:20" name="@bazel_tools//tools/jdk:launcher_flag_alias">
+        <string name="name" value="launcher_flag_alias"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:9:11" name="@maven//:ch_qos_logback_logback_classic">
+        <string name="name" value="ch_qos_logback_logback_classic"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=ch.qos.logback:logback-classic:1.5.11"/>
+            <string value="maven_url=http://uk.maven.org/maven2/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:ch_qos_logback_logback_core"/>
+            <label value="@maven//:org_slf4j_slf4j_api"/>
+        </list>
+        <rule-input name="@maven//:ch_qos_logback_logback_core"/>
+        <rule-input name="@maven//:org_slf4j_slf4j_api"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:28:11" name="@maven//:ch_qos_logback_logback_core">
+        <string name="name" value="ch_qos_logback_logback_core"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=ch.qos.logback:logback-core:1.5.11"/>
+            <string value="maven_url=http://uk.maven.org/maven2/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:45:11" name="@maven//:com_fasterxml_jackson_core_jackson_annotations">
+        <string name="name" value="com_fasterxml_jackson_core_jackson_annotations"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.fasterxml.jackson.core:jackson-annotations:2.17.2"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:62:11" name="@maven//:com_fasterxml_jackson_core_jackson_core">
+        <string name="name" value="com_fasterxml_jackson_core_jackson_core"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.fasterxml.jackson.core:jackson-core:2.17.2"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:79:11" name="@maven//:com_fasterxml_jackson_core_jackson_databind">
+        <string name="name" value="com_fasterxml_jackson_core_jackson_databind"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.fasterxml.jackson.core:jackson-databind:2.17.2"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_annotations"/>
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_core"/>
+        </list>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_annotations"/>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:98:11" name="@maven//:com_fasterxml_jackson_datatype_jackson_datatype_jdk8">
+        <string name="name" value="com_fasterxml_jackson_datatype_jackson_datatype_jdk8"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.17.2"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_core"/>
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_databind"/>
+        </list>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_core"/>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_databind"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:117:11" name="@maven//:com_fasterxml_jackson_datatype_jackson_datatype_jsr310">
+        <string name="name" value="com_fasterxml_jackson_datatype_jackson_datatype_jsr310"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.17.2"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_annotations"/>
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_core"/>
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_databind"/>
+        </list>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_annotations"/>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_core"/>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_databind"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:137:11" name="@maven//:com_fasterxml_jackson_module_jackson_module_parameter_names">
+        <string name="name" value="com_fasterxml_jackson_module_jackson_module_parameter_names"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.fasterxml.jackson.module:jackson-module-parameter-names:2.17.2"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_core"/>
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_databind"/>
+        </list>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_core"/>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_databind"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:173:11" name="@maven//:com_google_code_findbugs_jsr305">
+        <string name="name" value="com_google_code_findbugs_jsr305"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.google.code.findbugs:jsr305:3.0.2"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:207:11" name="@maven//:com_google_errorprone_error_prone_annotations">
+        <string name="name" value="com_google_errorprone_error_prone_annotations"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.google.errorprone:error_prone_annotations:2.11.0"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:224:11" name="@maven//:com_google_guava_failureaccess">
+        <string name="name" value="com_google_guava_failureaccess"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.google.guava:failureaccess:1.0.1"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:241:11" name="@maven//:com_google_guava_guava">
+        <string name="name" value="com_google_guava_guava"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.google.guava:guava:31.1-jre"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/google/guava/guava/31.1-jre/guava-31.1-jre-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:com_google_code_findbugs_jsr305"/>
+            <label value="@maven//:com_google_errorprone_error_prone_annotations"/>
+            <label value="@maven//:com_google_guava_failureaccess"/>
+            <label value="@maven//:com_google_guava_listenablefuture"/>
+            <label value="@maven//:com_google_j2objc_j2objc_annotations"/>
+            <label value="@maven//:org_checkerframework_checker_qual"/>
+        </list>
+        <rule-input name="@maven//:com_google_code_findbugs_jsr305"/>
+        <rule-input name="@maven//:com_google_errorprone_error_prone_annotations"/>
+        <rule-input name="@maven//:com_google_guava_failureaccess"/>
+        <rule-input name="@maven//:com_google_guava_listenablefuture"/>
+        <rule-input name="@maven//:com_google_j2objc_j2objc_annotations"/>
+        <rule-input name="@maven//:org_checkerframework_checker_qual"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/guava/31.1-jre/guava-31.1-jre-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:287:11" name="@maven//:com_google_guava_listenablefuture">
+        <string name="name" value="com_google_guava_listenablefuture"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+        </list>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:303:11" name="@maven//:com_google_j2objc_j2objc_annotations">
+        <string name="name" value="com_google_j2objc_j2objc_annotations"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=com.google.j2objc:j2objc-annotations:1.3"/>
+            <string value="maven_url=http://uk.maven.org/maven2/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:397:11" name="@maven//:io_micrometer_micrometer_commons">
+        <string name="name" value="io_micrometer_micrometer_commons"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=io.micrometer:micrometer-commons:1.13.6"/>
+            <string value="maven_url=http://uk.maven.org/maven2/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:455:11" name="@maven//:io_micrometer_micrometer_observation">
+        <string name="name" value="io_micrometer_micrometer_observation"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=io.micrometer:micrometer-observation:1.13.6"/>
+            <string value="maven_url=http://uk.maven.org/maven2/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:io_micrometer_micrometer_commons"/>
+        </list>
+        <rule-input name="@maven//:io_micrometer_micrometer_commons"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:490:11" name="@maven//:jakarta_annotation_jakarta_annotation_api">
+        <string name="name" value="jakarta_annotation_jakarta_annotation_api"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=jakarta.annotation:jakarta.annotation-api:2.1.1"/>
+            <string value="maven_url=http://uk.maven.org/maven2/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:771:11" name="@maven//:org_apache_logging_log4j_log4j_api">
+        <string name="name" value="org_apache_logging_log4j_log4j_api"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.apache.logging.log4j:log4j-api:2.23.1"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:788:11" name="@maven//:org_apache_logging_log4j_log4j_to_slf4j">
+        <string name="name" value="org_apache_logging_log4j_log4j_to_slf4j"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.apache.logging.log4j:log4j-to-slf4j:2.23.1"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_apache_logging_log4j_log4j_api"/>
+            <label value="@maven//:org_slf4j_slf4j_api"/>
+        </list>
+        <rule-input name="@maven//:org_apache_logging_log4j_log4j_api"/>
+        <rule-input name="@maven//:org_slf4j_slf4j_api"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:807:11" name="@maven//:org_apache_tomcat_embed_tomcat_embed_core">
+        <string name="name" value="org_apache_tomcat_embed_tomcat_embed_core"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.apache.tomcat.embed:tomcat-embed-core:10.1.31"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:824:11" name="@maven//:org_apache_tomcat_embed_tomcat_embed_el">
+        <string name="name" value="org_apache_tomcat_embed_tomcat_embed_el"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.apache.tomcat.embed:tomcat-embed-el:10.1.31"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:841:11" name="@maven//:org_apache_tomcat_embed_tomcat_embed_websocket">
+        <string name="name" value="org_apache_tomcat_embed_tomcat_embed_websocket"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.apache.tomcat.embed:tomcat-embed-websocket:10.1.31"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_apache_tomcat_embed_tomcat_embed_core"/>
+        </list>
+        <rule-input name="@maven//:org_apache_tomcat_embed_tomcat_embed_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:876:11" name="@maven//:org_aspectj_aspectjweaver">
+        <string name="name" value="org_aspectj_aspectjweaver"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.aspectj:aspectjweaver:1.9.22.1"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:946:11" name="@maven//:org_checkerframework_checker_qual">
+        <string name="name" value="org_checkerframework_checker_qual"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.checkerframework:checker-qual:3.12.0"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:1839:11" name="@maven//:org_slf4j_jul_to_slf4j">
+        <string name="name" value="org_slf4j_jul_to_slf4j"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.slf4j:jul-to-slf4j:2.0.16"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_slf4j_slf4j_api"/>
+        </list>
+        <rule-input name="@maven//:org_slf4j_slf4j_api"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:1857:11" name="@maven//:org_slf4j_slf4j_api">
+        <string name="name" value="org_slf4j_slf4j_api"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.slf4j:slf4j-api:2.0.16"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:1874:11" name="@maven//:org_springframework_boot_spring_boot">
+        <string name="name" value="org_springframework_boot_spring_boot"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework.boot:spring-boot:3.3.5"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_context"/>
+            <label value="@maven//:org_springframework_spring_core"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_context"/>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:1933:11" name="@maven//:org_springframework_boot_spring_boot_autoconfigure">
+        <string name="name" value="org_springframework_boot_spring_boot_autoconfigure"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework.boot:spring-boot-autoconfigure:3.3.5"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_boot_spring_boot"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2004:11" name="@maven//:org_springframework_boot_spring_boot_starter">
+        <string name="name" value="org_springframework_boot_spring_boot_starter"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework.boot:spring-boot-starter:3.3.5"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:jakarta_annotation_jakarta_annotation_api"/>
+            <label value="@maven//:org_springframework_boot_spring_boot"/>
+            <label value="@maven//:org_springframework_boot_spring_boot_autoconfigure"/>
+            <label value="@maven//:org_springframework_boot_spring_boot_starter_logging"/>
+            <label value="@maven//:org_springframework_spring_core"/>
+            <label value="@maven//:org_yaml_snakeyaml"/>
+        </list>
+        <rule-input name="@maven//:jakarta_annotation_jakarta_annotation_api"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot_autoconfigure"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot_starter_logging"/>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:org_yaml_snakeyaml"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2113:11" name="@maven//:org_springframework_boot_spring_boot_starter_json">
+        <string name="name" value="org_springframework_boot_spring_boot_starter_json"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework.boot:spring-boot-starter-json:3.3.5"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:com_fasterxml_jackson_core_jackson_databind"/>
+            <label value="@maven//:com_fasterxml_jackson_datatype_jackson_datatype_jdk8"/>
+            <label value="@maven//:com_fasterxml_jackson_datatype_jackson_datatype_jsr310"/>
+            <label value="@maven//:com_fasterxml_jackson_module_jackson_module_parameter_names"/>
+            <label value="@maven//:org_springframework_boot_spring_boot_starter"/>
+            <label value="@maven//:org_springframework_spring_web"/>
+        </list>
+        <rule-input name="@maven//:com_fasterxml_jackson_core_jackson_databind"/>
+        <rule-input name="@maven//:com_fasterxml_jackson_datatype_jackson_datatype_jdk8"/>
+        <rule-input name="@maven//:com_fasterxml_jackson_datatype_jackson_datatype_jsr310"/>
+        <rule-input name="@maven//:com_fasterxml_jackson_module_jackson_module_parameter_names"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot_starter"/>
+        <rule-input name="@maven//:org_springframework_spring_web"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2136:11" name="@maven//:org_springframework_boot_spring_boot_starter_logging">
+        <string name="name" value="org_springframework_boot_spring_boot_starter_logging"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework.boot:spring-boot-starter-logging:3.3.5"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:ch_qos_logback_logback_classic"/>
+            <label value="@maven//:org_apache_logging_log4j_log4j_to_slf4j"/>
+            <label value="@maven//:org_slf4j_jul_to_slf4j"/>
+        </list>
+        <rule-input name="@maven//:ch_qos_logback_logback_classic"/>
+        <rule-input name="@maven//:org_apache_logging_log4j_log4j_to_slf4j"/>
+        <rule-input name="@maven//:org_slf4j_jul_to_slf4j"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2229:11" name="@maven//:org_springframework_boot_spring_boot_starter_tomcat">
+        <string name="name" value="org_springframework_boot_spring_boot_starter_tomcat"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework.boot:spring-boot-starter-tomcat:3.3.5"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:jakarta_annotation_jakarta_annotation_api"/>
+            <label value="@maven//:org_apache_tomcat_embed_tomcat_embed_core"/>
+            <label value="@maven//:org_apache_tomcat_embed_tomcat_embed_el"/>
+            <label value="@maven//:org_apache_tomcat_embed_tomcat_embed_websocket"/>
+        </list>
+        <rule-input name="@maven//:jakarta_annotation_jakarta_annotation_api"/>
+        <rule-input name="@maven//:org_apache_tomcat_embed_tomcat_embed_core"/>
+        <rule-input name="@maven//:org_apache_tomcat_embed_tomcat_embed_el"/>
+        <rule-input name="@maven//:org_apache_tomcat_embed_tomcat_embed_websocket"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2250:11" name="@maven//:org_springframework_boot_spring_boot_starter_web">
+        <string name="name" value="org_springframework_boot_spring_boot_starter_web"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework.boot:spring-boot-starter-web:3.3.5"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_boot_spring_boot_starter"/>
+            <label value="@maven//:org_springframework_boot_spring_boot_starter_json"/>
+            <label value="@maven//:org_springframework_boot_spring_boot_starter_tomcat"/>
+            <label value="@maven//:org_springframework_spring_web"/>
+            <label value="@maven//:org_springframework_spring_webmvc"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot_starter"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot_starter_json"/>
+        <rule-input name="@maven//:org_springframework_boot_spring_boot_starter_tomcat"/>
+        <rule-input name="@maven//:org_springframework_spring_web"/>
+        <rule-input name="@maven//:org_springframework_spring_webmvc"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2398:11" name="@maven//:org_springframework_spring_aop">
+        <string name="name" value="org_springframework_spring_aop"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-aop:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_beans"/>
+            <label value="@maven//:org_springframework_spring_core"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_beans"/>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2417:11" name="@maven//:org_springframework_spring_aspects">
+        <string name="name" value="org_springframework_spring_aspects"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-aspects:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_aspectj_aspectjweaver"/>
+        </list>
+        <rule-input name="@maven//:org_aspectj_aspectjweaver"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2435:11" name="@maven//:org_springframework_spring_beans">
+        <string name="name" value="org_springframework_spring_beans"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-beans:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_core"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2453:11" name="@maven//:org_springframework_spring_context">
+        <string name="name" value="org_springframework_spring_context"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-context:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-context/6.1.14/spring-context-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:io_micrometer_micrometer_observation"/>
+            <label value="@maven//:org_springframework_spring_aop"/>
+            <label value="@maven//:org_springframework_spring_beans"/>
+            <label value="@maven//:org_springframework_spring_core"/>
+            <label value="@maven//:org_springframework_spring_expression"/>
+        </list>
+        <rule-input name="@maven//:io_micrometer_micrometer_observation"/>
+        <rule-input name="@maven//:org_springframework_spring_aop"/>
+        <rule-input name="@maven//:org_springframework_spring_beans"/>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:org_springframework_spring_expression"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-context/6.1.14/spring-context-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2495:11" name="@maven//:org_springframework_spring_core">
+        <string name="name" value="org_springframework_spring_core"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-core:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-core/6.1.14/spring-core-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_jcl"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_jcl"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-core/6.1.14/spring-core-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2513:11" name="@maven//:org_springframework_spring_expression">
+        <string name="name" value="org_springframework_spring_expression"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-expression:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_core"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2531:11" name="@maven//:org_springframework_spring_jcl">
+        <string name="name" value="org_springframework_spring_jcl"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-jcl:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2548:11" name="@maven//:org_springframework_spring_jdbc">
+        <string name="name" value="org_springframework_spring_jdbc"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-jdbc:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_beans"/>
+            <label value="@maven//:org_springframework_spring_core"/>
+            <label value="@maven//:org_springframework_spring_tx"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_beans"/>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:org_springframework_spring_tx"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2568:11" name="@maven//:org_springframework_spring_test">
+        <string name="name" value="org_springframework_spring_test"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-test:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-test/6.1.14/spring-test-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-test/6.1.14/spring-test-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-test/6.1.14/spring-test-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_core"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-test/6.1.14/spring-test-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-test/6.1.14/spring-test-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2586:11" name="@maven//:org_springframework_spring_tx">
+        <string name="name" value="org_springframework_spring_tx"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-tx:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_beans"/>
+            <label value="@maven//:org_springframework_spring_core"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_beans"/>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2605:11" name="@maven//:org_springframework_spring_web">
+        <string name="name" value="org_springframework_spring_web"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-web:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-web/6.1.14/spring-web-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:io_micrometer_micrometer_observation"/>
+            <label value="@maven//:org_springframework_spring_beans"/>
+            <label value="@maven//:org_springframework_spring_core"/>
+        </list>
+        <rule-input name="@maven//:io_micrometer_micrometer_observation"/>
+        <rule-input name="@maven//:org_springframework_spring_beans"/>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-web/6.1.14/spring-web-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2625:11" name="@maven//:org_springframework_spring_webmvc">
+        <string name="name" value="org_springframework_spring_webmvc"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.springframework:spring-webmvc:6.1.14"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14-sources.jar"/>
+        <list name="deps">
+            <label value="@maven//:org_springframework_spring_aop"/>
+            <label value="@maven//:org_springframework_spring_beans"/>
+            <label value="@maven//:org_springframework_spring_context"/>
+            <label value="@maven//:org_springframework_spring_core"/>
+            <label value="@maven//:org_springframework_spring_expression"/>
+            <label value="@maven//:org_springframework_spring_web"/>
+        </list>
+        <rule-input name="@maven//:org_springframework_spring_aop"/>
+        <rule-input name="@maven//:org_springframework_spring_beans"/>
+        <rule-input name="@maven//:org_springframework_spring_context"/>
+        <rule-input name="@maven//:org_springframework_spring_core"/>
+        <rule-input name="@maven//:org_springframework_spring_expression"/>
+        <rule-input name="@maven//:org_springframework_spring_web"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar"/>
+    </rule>
+    <rule class="jvm_import" location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/BUILD:2722:11" name="@maven//:org_yaml_snakeyaml">
+        <string name="name" value="org_yaml_snakeyaml"/>
+        <list name="visibility">
+            <label value="//visibility:public"/>
+        </list>
+        <list name="tags">
+            <string value="maven_coordinates=org.yaml:snakeyaml:2.2"/>
+            <string value="maven_url=http://uk.maven.org/maven2/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"/>
+        </list>
+        <list name="jars">
+            <label value="@maven//:v1/https/jcenter.bintray.com/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"/>
+        </list>
+        <label name="srcjar" value="@maven//:v1/https/jcenter.bintray.com/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar"/>
+        <list name="deps"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar"/>
+        <rule-input name="@maven//:v1/https/jcenter.bintray.com/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar"/>
+    </rule>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.5.11/logback-classic-1.5.11.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.5.11/logback-core-1.5.11.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/guava/31.1-jre/guava-31.1-jre-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/guava/31.1-jre/guava-31.1-jre-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-commons/1.13.6/micrometer-commons-1.13.6.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/io/micrometer/micrometer-observation/1.13.6/micrometer-observation-1.13.6.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-core/10.1.31/tomcat-embed-core-10.1.31.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-el/10.1.31/tomcat-embed-el-10.1.31.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.31/tomcat-embed-websocket-10.1.31.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/aspectj/aspectjweaver/1.9.22.1/aspectjweaver-1.9.22.1.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-autoconfigure/3.3.5/spring-boot-autoconfigure-3.3.5.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-json/3.3.5/spring-boot-starter-json-3.3.5.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-logging/3.3.5/spring-boot-starter-logging-3.3.5.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-tomcat/3.3.5/spring-boot-starter-tomcat-3.3.5.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter-web/3.3.5/spring-boot-starter-web-3.3.5.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot-starter/3.3.5/spring-boot-starter-3.3.5.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/boot/spring-boot/3.3.5/spring-boot-3.3.5.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aop/6.1.14/spring-aop-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-aspects/6.1.14/spring-aspects-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-beans/6.1.14/spring-beans-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-context/6.1.14/spring-context-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-context/6.1.14/spring-context-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-context/6.1.14/spring-context-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-core/6.1.14/spring-core-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-core/6.1.14/spring-core-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-core/6.1.14/spring-core-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-expression/6.1.14/spring-expression-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jcl/6.1.14/spring-jcl-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-jdbc/6.1.14/spring-jdbc-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-test/6.1.14/spring-test-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-test/6.1.14/spring-test-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-test/6.1.14/spring-test-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-test/6.1.14/spring-test-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-tx/6.1.14/spring-tx-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-web/6.1.14/spring-web-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-web/6.1.14/spring-web-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-web/6.1.14/spring-web-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/springframework/spring-webmvc/6.1.14/spring-webmvc-6.1.14.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/yaml/snakeyaml/2.2/snakeyaml-2.2-sources.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+    <source-file location="/private/var/tmp/_bazel_roberthicks/1c4a67a6e9f19bada8499162c85e878a/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:1:1" name="@maven//:v1/https/jcenter.bintray.com/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar">
+        <visibility-label name="//visibility:private"/>
+    </source-file>
+</query>

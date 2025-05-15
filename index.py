@@ -15,8 +15,10 @@ def convert_bazel_depgraph_to_sbom(input_file: str, output_file: str):
         output_file (str): Path where the SBOM will be saved.
     """
     print(f"Converting {input_file} to SBOM and saving to {output_file}")
-    bazel_deps = read_bazel_deps(input_file)
-    sbom = generate_cyclonedx_sbom(bazel_deps)
+    bazel_deps, main_component_name = read_bazel_deps(input_file)
+    print(json.dumps(bazel_deps, indent=4))
+    print(f"Main component name: {main_component_name}")
+    sbom = generate_cyclonedx_sbom(bazel_deps, main_component_name)
     write_json_file(output_file, sbom)
     print(f"SBOM saved to {output_file}")
     
