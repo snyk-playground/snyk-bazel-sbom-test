@@ -6,7 +6,7 @@ def get_snyk_token():
     SNYK_TOKEN = check_if_snyk_token_exist()
     
     pattern = re.compile(r'([\d\w]{8}-[\d\w]{4}-[\d\w]{4}-[\d\w]{4}-[\d\w]{12})')
-    if pattern.fullmatch(SNYK_TOKEN) == None:
+    if SNYK_TOKEN is None or pattern.fullmatch(SNYK_TOKEN) is None:
         print("Snyk token is not defined or not valid.")
         sys.exit()
     else:
@@ -20,4 +20,4 @@ def check_if_snyk_token_exist():
             return os.getenv('SNYK_TOKEN')
     except:
         print("Snyk token does not exist")
-        sys.exit()
+        return None
